@@ -1,0 +1,10 @@
+# Arquivos e pastas a serem ignorados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+reports/
+data/*.csv
+.venv/
+.env/
+.DS_Store

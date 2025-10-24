@@ -1,0 +1,15 @@
+{
+  "Alimentação": 1000,
+  "Transporte": 400,
+  "Entretenimento": 300
+}
+import json
+
+def verificar_metas(df, caminho_metas='metas.json'):
+    metas = json.load(open(caminho_metas))
+    alertas = []
+    for cat, limite in metas.items():
+        gasto = abs(df[df['categoria'] == cat]['valor'].sum())
+        if gasto > limite:
+            alertas.append(f"⚠️ Categoria {cat} ultrapassou a meta (R$ {gasto:.2f} / R$ {limite:.2f})")
+    return alertas
