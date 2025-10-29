@@ -19,4 +19,5 @@ Tecnologias: Python, Pandas, Streamlit, Matplotlib, Reportlab
 Como rodar:
 
 pip install -r requirements.txt
+
 streamlit run src/interface.py
